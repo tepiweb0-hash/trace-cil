@@ -1,8 +1,23 @@
-# TRACE — Cyber Investigation Lab V10.1
+# TRACE — Cyber Investigation Lab V10.2
 
-**Build:** V10.1 / Cases C001–C100
+**Build:** V10.2 / Cases C001–C100
 
 A Vercel-ready, self-learning cybersecurity detective game focused on practical investigation, authorized penetration-testing logic, incident response, security configuration, and defensive hardening.
+
+
+## V10.2 investigation-game rework
+
+V10.2 changes the presentation from a cyber-themed exercise into a beginner-friendly dark investigation game while preserving the 100 existing case datasets.
+
+- Added a tense investigation-workstation presentation with subtle CRT scanlines, incident alerts, dossier styling, and an investigation pulse instead of quiz-style progress.
+- Added a permanent **Field Guide** to every case. It explains networking and cybersecurity terms in plain English and automatically surfaces terms relevant to the current case.
+- Added beginner explanations to Inbox, Browser, System Logs, Terminal, Evidence Locker, Evidence Board, Response Console, Notes, and Final Report.
+- Added clickable terminal command suggestions. Players do not need prior Linux or command-line knowledge.
+- Reworked the case briefing around **Observe → Connect → Collect → Explain** rather than answer-first interaction.
+- Reworked theory submission into a guided **Final Investigator Report** with sentence starters and evidence-oriented prompts.
+- Added per-case investigation progress based on exploration, pinned evidence, notes, report drafting, and evidence review. This is progress feedback, not a knowledge score.
+- Added beginner-first copy throughout: the system explicitly assumes zero prior networking or cybersecurity knowledge.
+- Retained the V10.1 resilience, cloud-save, validation, accessibility, and C075 rendering fixes.
 
 ## V10.1 quality and resilience pass
 
@@ -38,7 +53,7 @@ See `AUDIT_REPORT.md` for the findings and changes.
 - Evidence board.
 - Response/hardening actions with consequences.
 - Free-form notebook and theory submission.
-- Evidence-based review with no XP, levels, streaks, progress bars, or numeric scores.
+- Evidence-based review with no XP, levels, streaks, or numeric quiz scores; the Investigation Pulse only shows workflow progress.
 - Local browser persistence by default.
 - Optional Supabase email/password login and per-user cloud save.
 - Vercel serverless `/api/config` endpoint for public Supabase configuration.

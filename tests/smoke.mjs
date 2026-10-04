@@ -36,5 +36,7 @@ const malformed = normalizeState({
 assert(malformed.activeCase === 'C001', 'Malformed active case should normalize safely');
 assert(getCaseState(malformed, 'C003').pinned.length === 1, 'Pinned evidence should be de-duplicated');
 assert(getCaseState(malformed, 'C003').terminal.length === 80, 'Terminal history should be bounded');
+assert(Array.isArray(getCaseState(normalizeState({cases:{C004:{visitedTools:['mail','mail','guide']}}}), 'C004').visitedTools), 'Visited tools should normalize as an array');
+assert(getCaseState(normalizeState({cases:{C004:{visitedTools:['mail','mail','guide']}}}), 'C004').visitedTools.length === 2, 'Visited tools should be de-duplicated');
 
 console.log('TRACE smoke tests passed.');

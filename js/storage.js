@@ -11,6 +11,7 @@ const DEFAULT_CASE_STATE = Object.freeze({
   mailId: null,
   browserId: null,
   logId: null,
+  visitedTools: [],
   updatedAt: null,
   openedAt: null
 });
@@ -52,6 +53,7 @@ export function normalizeCaseState(input) {
     mailId: typeof raw.mailId === 'string' ? raw.mailId : null,
     browserId: typeof raw.browserId === 'string' ? raw.browserId : null,
     logId: typeof raw.logId === 'string' ? raw.logId : null,
+    visitedTools: Array.isArray(raw.visitedTools) ? [...new Set(raw.visitedTools.filter(x => typeof x === 'string'))] : [],
     updatedAt: validDate(raw.updatedAt),
     openedAt: validDate(raw.openedAt)
   };
