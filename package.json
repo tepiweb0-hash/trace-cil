@@ -1,0 +1,12 @@
+{
+  "name": "trace-cyber-investigation-lab",
+  "version": "10.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "serve": "python3 -m http.server 4173",
+    "check": "node --check js/app.js && node --check js/cases.js && node --check js/storage.js && node --check js/supabase.js && node --check api/config.js",
+    "validate": "node validate.mjs",
+    "test": "npm run check && node validate.mjs && node tests/smoke.mjs"
+  }
+}
